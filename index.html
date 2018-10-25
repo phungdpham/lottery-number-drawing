@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lottery Drawing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="text-center">Generate a Random Number!</h1>
+        <div class="text-center">
+            <button id="random-button" class="btn btn-primary btn lg fa fa-question"></button><br>
+            <div style="margin-top: 40px">
+                <span id="random1" class="normalBall"></span>
+                <span id="random2" class="normalBall"></span>
+                <span id="random3" class="normalBall"></span>
+                <span id="random4" class="normalBall"></span>
+                <span id="random5" class="normalBall"></span>
+                <span id="powerball" class="powerBall"></span>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center" id="random-number"></h1>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#random-button").on("click", function() {
+            //Generating random number from 1 to 70
+            var random1 = Math.floor(Math.random() * 69) + 1;
+            var random2 = Math.floor(Math.random() * 69) + 1;
+            var random3 = Math.floor(Math.random() * 69) + 1;
+            var random4 = Math.floor(Math.random() * 69) + 1;
+            var random5 = Math.floor(Math.random() * 69) + 1;
+            var powerball = Math.floor(Math.random() * 69) + 1;
+            //Displaying random number into the random-number div
+            $("#random1").text(random1);
+            $("#random2").text(random2);
+            $("#random3").text(random3);
+            $("#random4").text(random4);
+            $("#random5").text(random5);
+            $("#powerball").text(powerball);
+        });
+    });
+</script>
+    
+</body>
+</html>

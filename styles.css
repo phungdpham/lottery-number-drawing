@@ -1,0 +1,14 @@
+.normalBall {
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+.powerBall {
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
